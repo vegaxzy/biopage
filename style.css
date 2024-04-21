@@ -1,0 +1,121 @@
+/* Resetowanie */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-color: black;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Tło */
+.back-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 20%;
+}
+
+/* Kontener główny */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+/* Zawartość główna */
+.main-content {
+    max-width: 80%;
+    text-align: center;
+}
+
+#logo {
+    width: 50vh;
+    height: 19.5vh;
+}
+
+#odnosniki {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-shadow: 0 0 0.6em ;
+    transition: transform 0.3s;
+}
+
+.odnosniki {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-shadow: 0 0 0.6em ;
+    transition: transform 0.3s;
+    padding: 5vh;
+}
+
+a:hover {
+    transform: scale(1.1);
+} 
+
+/* Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparentne tło */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Umieszczamy nad innymi elementami */
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Kolor granicy */
+    border-top: 8px solid #3498db; /* Kolor górnej granicy */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Animacja */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ukrywanie preloadera po załadowaniu strony */
+.loaded .preloader {
+    display: none;
+}
+
+/* Animacja */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+}
