@@ -1,4 +1,4 @@
-var title = new MovingTitle("777vegaxzy ", 300, 10);
+var title = new MovingTitle("4Ozmbcije3VssntKuCzN7dx0oGgV/zQvUR0qSiXU7So= ", 300, 10);
 title.init();
 function MovingTitle(writeText, interval, visibleLetters) {
 var _instance = {};
